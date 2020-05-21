@@ -4,8 +4,23 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    # a = 0
+    # for x in arr:
+    #     a ^= x
+    # return a    
+    
+    counts = {}
+    for n in arr:
+        if n in counts:
+            counts[n] += 1
+        else:
+            counts[n] = 1
+    for n, i in counts.items():        
+        if i ==1:
+            return n        
 
-    pass
+
+    
 
 
 if __name__ == '__main__':
